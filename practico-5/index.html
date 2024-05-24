@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practico 5</title>
+</head>
+<body>
+    <div>
+        <p>Inserta numeros separados por comas para regresár el mayor</p>
+        <input type="text">
+        <button onclick="muestraResultado()">Calcular</button>
+        <div id="mayor"></div>
+        <p>
+            let arreglo = [];
+        function mayorDelArreglo(arreglo) {
+            let mayor;
+            mayor = Math.max(...arreglo);
+            return mayor;
+        }
+        </p>
+    </div>
+    <script>
+        let arreglo = [];
+        function mayorDelArreglo(arreglo) {
+            let mayor;
+            mayor = Math.max(...arreglo);
+            return mayor;
+        }
+
+        function muestraResultado(){
+            const input = document.querySelector('input')
+            arreglo = input.value.split(',')
+            document.querySelector('#mayor').innerHTML = `El numero mayor es ${mayorDelArreglo(arreglo)}`;
+
+        }
+    </script>
+</body>
+</html>
